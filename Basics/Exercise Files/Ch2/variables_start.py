@@ -3,7 +3,7 @@
 #
 
 # Declare a variable and initialize it
-
+f=0
 
 
 # re-declaring the variable works
@@ -15,5 +15,12 @@
 
 
 # Global vs. local variables in functions
+def someFunction():
+    global f
+    f = "def"
+    del f
+    print(f)
 
+someFunction()
+print(f)
 
